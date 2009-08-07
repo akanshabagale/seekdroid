@@ -1,0 +1,119 @@
+<!---
+This source is licensed with Creative Commons Attribution-Share Alike 3.0 Unported
+To read the full license: http://creativecommons.org/licenses/by-sa/3.0/
+Legal Code: http://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+Authors: 
+
+  Albert Castellana 
+  Xavier Ruiz
+         
+For more information and updates:
+  www.onthetopofthewave.com     
+    
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>SeekDroid</title>
+
+<link rel="schema.dc" href="http://purl.org/DC/elements/1.1/" />
+<meta name="dc.title" content="SeekDroid" />
+<meta name="dc.subject" content="" />
+<meta name="dc.description" content="" />
+<meta scheme="url" name="dc.identifier" content="http://seekdroid.appspot.com/" />
+<meta name="dc.publisher.corporatename" content="Onthetopofthewave" />
+<meta scheme="e-mail" name="dc.publisher.corporatename.address" content="kiwibcn@gmail.com" />
+<meta scheme="urn" name="dc.rights" content="Kiwibcn" />
+
+<meta name="publisher" content="Kiwibcn" />
+<meta name="copyright" content="Kiwibcn" />
+<meta name="keywords" content="google wave, robots, api, extensions, seekdroir, search robot, search bot" />
+<meta name="description" content="" />
+<meta http-equiv="expires" content="NEVER" />
+
+<link href="inc/default.css" rel="stylesheet" type="text/css" />
+
+
+<script src="http://www.google.com/jsapi?key=ABQIAAAAHnuPPE14jy0cLOnZyrBIRhTZ7OC6JTQNELuMMNOATJajLqpfxRRLTT0LrVxnQUlBwQWxrHDLSx17UQ" type="text/javascript"></script>
+<script language="Javascript" type="text/javascript">
+    //<![CDATA[
+
+    google.load("jquery", "1.3.2");
+
+    function OnLoad() {
+    	$('a#add_link').click(function() {
+    		$('#add_link').hide(0);
+			$('#form').fadeIn('slow');
+			return false;
+		});
+    }
+    google.setOnLoadCallback(OnLoad);
+
+    //]]>
+</script>
+</head>
+<body>
+
+
+
+<div id='wrapper'>
+<h1> SeekDroid </h1>
+
+<ul>
+	{% for robot in robots %}
+	<li><b><a href="mailto:{{ robot.domini }}">{{ robot.nom }} </a></b> - {{ robot.categoria }} - {{ robot.autor }} - <b>{{ robot.num_vots }}</b>
+	<form action="/voteRobot" method="post">
+		<input type="hidden" name="domini" value={{ robot.domini }} />
+		<input type="submit" value="+">
+	</form>
+	<div class='description'>{{ robot.descripcio|escape }}</div><br />
+	{% endfor %}
+</ul>
+
+</div>
+<div id="other">
+	
+	<div id="form" style="display:none;">
+	    <form action="/addRobot" method="post">
+		      Name<br /><input type="text" name="nom" /><br /><br />
+		      Domain<br /><input type="text" name="domini" /><br /><br />
+		      Author<br /><input type="text" name="autor" /><br /><br />
+		      Category<br /><input type="text" name="categoria" /><br /><br />
+		      Description<br /><input type="text" name="descripcio" /><br /><br />
+	      		<input type="submit" value="Submit Robot">
+	    </form>
+	</div>
+	<a id="add_link" href="#add_link">Do you know any other robot?</a>
+</div>
+</body>
+</html>
+
+
+<!--
+<html>
+  <body>
+    {% for robot in robots %}
+      {% if robot.author %}
+        <b>{{ greeting.author.nickname }}</b> wrote:
+      {% else %}
+       An anonymous person wrote:
+      {% endif %}
+      <blockquote>{{ greeting.content|escape }}</blockquote>
+    {% endfor %}
+
+    <form action="/sign" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Sign Guestbook"></div>
+    </form>
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>
+
+-->
