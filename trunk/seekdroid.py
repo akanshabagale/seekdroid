@@ -178,7 +178,8 @@ if __name__ == '__main__':
   seekdroid.Run()
 
 """
-Known Bugs:
+Known Bugs: 
+
 
 -Non validated bots can be invited
 
