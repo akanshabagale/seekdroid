@@ -1,0 +1,89 @@
+
+li {
+	text-align: justify;
+	font-family:"Century Gothic",verdana;
+	font-size:14px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:22px;
+
+}
+
+h1 {
+
+	font-family:"Century Gothic",verdana;
+	font-size:35px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:22px;
+}
+
+#other {
+	margin:auto;
+	text-align:center;
+	width:40%;
+	
+}
+
+#wrapper {
+	width: 75%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#add_link{
+	display:block;
+	font-style: normal;
+	font-size: x-large;
+	color: #69F775;
+}
+
+.description {
+	font-style: italic;
+
+}
+
+/* Rounded corners */
+
+.spiffy{display:block}
+.spiffy *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#69F775}
+.spiffy1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #befbc3;
+  border-right:1px solid #befbc3;
+  background:#8ef997}
+.spiffy2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #f0fef1;
+  border-right:1px solid #f0fef1;
+  background:#85f88f}
+.spiffy3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #85f88f;
+  border-right:1px solid #85f88f;}
+.spiffy4{
+  border-left:1px solid #befbc3;
+  border-right:1px solid #befbc3}
+.spiffy5{
+  border-left:1px solid #8ef997;
+  border-right:1px solid #8ef997}
+.spiffyfg{
+  background:#69F775}
+

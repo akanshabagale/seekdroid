@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="Seekdroid add gadget" /> 
+  <Content type="html">
+     <![CDATA[ 
+	    <form action="http://seekdroid.appspot.com/addRobot" method="post">
+		      Name<br /><input type="text" name="nom" /><br />
+		      Domain<br /><input type="text" name="domini" /><br />
+		      Author<br /><input type="text" name="autor" /><br />
+		      Category<br /><input type="text" name="categoria" /><br />
+		      Description<br /><input type="text" name="descripcio" /><br />
+      		<input type="submit" value="Submit Robot">
+	    </form>
+     ]]>
+  </Content> 
+</Module>

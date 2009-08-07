@@ -1,0 +1,30 @@
+########################################################################################
+#                                                                                      #
+# This source is licensed with Creative Commons Attribution-Share Alike 3.0 Unported   #
+# To read the full license: http://creativecommons.org/licenses/by-sa/3.0/             #
+# Legal Code: http://creativecommons.org/licenses/by-sa/3.0/legalcode                  #
+#                                                                                      #
+# Authors:                                                                             #
+#                                                                                      #
+#   Albert Castellana                                                                  #
+#   Xavier Ruiz                                                                        #
+#                                                                                      #
+# For more information and updates:                                                    #
+#   www.onthetopofthewave.com                                                          #
+#                                                                                      #
+########################################################################################
+
+application: seekdroid
+version: dev
+runtime: python
+api_version: 1
+
+handlers:
+- url: /_wave/.*
+  script: seekdroid.py
+
+- url: /inc
+  static_dir: inc
+
+- url: /.*
+  script: dev.py
